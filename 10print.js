@@ -3,17 +3,17 @@
 */
 
 const w = process.stdout.columns
-var w1 = Math.round(w * Math.random())
-var w2 = Math.round(w * Math.random())
-var max = Math.max(w1,w2)
-var min = Math.min(w1,w2)
-var positive = true
+let w1 = Math.round(w * Math.random())
+let w2 = Math.round(w * Math.random())
+let max = Math.max(w1,w2)
+let min = Math.min(w1,w2)
+let positive = true
 
 // For loop for creating each line of symbols
 function loop(num){
   let output = ''
   for (let i = 0; i < num; i++) {
-      var color = (Math.round(i*Math.random()) % 2 === 0) ? '\033[0;35m' : '\033[0;36m'
+      const color = (Math.round(i*Math.random()) % 2 === 0) ? '\033[0;35m' : '\033[0;36m'
       if (Math.random() > 0.8) output += `${color}╝`
       else if (Math.random() > 0.6) output += `${color}╚`
       else if (Math.random() > 0.4) output += `${color}╔`
